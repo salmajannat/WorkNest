@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Skills | WorkNest</title>
+    <link rel="stylesheet" href="learn-skills.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">WorkNest</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="find-work.html">Find Work</a></li>
+            <li><a href="do_work.html">Do Work</a></li>
+            <li><a href="learn_skills.html">Learn Skills</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+<section class="learn-header">
+    <h1>🎓 Learn New Skills</h1>
+    <div class="filter-box">
+        <input type="text" id="searchInput" placeholder="Search skills..." onkeyup="filterSkills()">
+        <select id="categoryFilter" onchange="filterSkills()">
+            <option value="all">All Categories</option>
+            <option value="digital">Digital & IT</option>
+            <option value="business">Business</option>
+            <option value="creative">Creative</option>
+            <option value="soft">Soft Skills</option>
+            <option value="freelance">Freelancing</option>
+        </select>
+    </div>
+</section>
+<section class="skills-container">
+<div class="skill-card" data-type="digital">
+    <h2>Web Development</h2>
+    <p>HTML, CSS, JavaScript</p>
+    <a href="https://www.freecodecamp.org/learn" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="digital">
+    <h2>Python Programming</h2>
+    <p>Web & Data Science</p>
+    <a href="https://www.coursera.org/specializations/python" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="digital">
+    <h2>Data Science</h2>
+    <p>Analyze & visualize data</p>
+    <a href="https://www.coursera.org/specializations/data-science" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="digital">
+    <h2>Machine Learning</h2>
+    <p>AI & predictive models</p>
+    <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="digital">
+    <h2>Cyber Security</h2>
+    <p>Protect systems & data</p>
+    <a href="https://www.coursera.org/learn/intro-cyber-security" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="digital">
+    <h2>Cloud Computing</h2>
+    <p>AWS, Azure basics</p>
+    <a href="https://www.coursera.org/specializations/cloud-computing" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="business">
+    <h2>Leadership Development</h2>
+    <p>Team leadership</p>
+    <a href="https://www.coursera.org/learn/leadership-skills" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="business">
+    <h2>Negotiation Skills</h2>
+    <p>Deal making</p>
+    <a href="https://www.coursera.org/learn/negotiation-skills" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="business">
+    <h2>Project Management</h2>
+    <p>Plan & execute projects</p>
+    <a href="https://www.coursera.org/learn/project-management" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="business">
+    <h2>Marketing Strategy</h2>
+    <p>Grow business</p>
+    <a href="https://www.coursera.org/learn/marketing-strategy" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="business">
+    <h2>Business Communication</h2>
+    <p>Professional speaking</p>
+    <a href="https://www.coursera.org/learn/business-communication" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="creative">
+    <h2>Graphic Design</h2>
+    <p>Logos, banners</p>
+    <a href="https://www.coursera.org/learn/graphic-design" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="creative">
+    <h2>UI Design</h2>
+    <p>App & web UI</p>
+    <a href="https://www.coursera.org/learn/ui-design" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="creative">
+    <h2>UX Design</h2>
+    <p>User experience</p>
+    <a href="https://www.coursera.org/learn/ux-design" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="creative">
+    <h2>Video Editing</h2>
+    <p>Premiere Pro basics</p>
+    <a href="https://www.udemy.com/course/video-editing/" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="creative">
+    <h2>Photography</h2>
+    <p>Camera & lighting</p>
+    <a href="https://www.coursera.org/learn/photography" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="soft">
+    <h2>Communication Skills</h2>
+    <p>Verbal & written</p>
+    <a href="https://www.coursera.org/learn/wharton-communication-skills" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="soft">
+    <h2>Problem Solving</h2>
+    <p>Critical thinking</p>
+    <a href="https://www.coursera.org/learn/problem-solving" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="soft">
+    <h2>Time Management</h2>
+    <p>Productivity</p>
+    <a href="https://www.coursera.org/learn/work-smarter-not-harder" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="soft">
+    <h2>Emotional Intelligence</h2>
+    <p>Self-awareness</p>
+    <a href="https://www.coursera.org/learn/emotional-intelligence" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="freelance">
+    <h2>Fiverr Skills</h2>
+    <p>Gig marketplace</p>
+    <a href="https://www.fiverr.com/" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="freelance">
+    <h2>Upwork Skills</h2>
+    <p>Freelance success</p>
+    <a href="https://www.upwork.com/" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="freelance">
+    <h2>Content Writing</h2>
+    <p>Blogs & articles</p>
+    <a href="https://www.coursera.org/learn/content-writing" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="freelance">
+    <h2>SEO Basics</h2>
+    <p>Website ranking</p>
+    <a href="https://www.coursera.org/learn/seo-fundamentals" target="_blank">Learn Skill</a>
+</div>
+<div class="skill-card" data-type="freelance">
+    <h2>Virtual Assistant</h2>
+    <p>Remote support</p>
+    <a href="https://www.udemy.com/course/virtual-assistant/" target="_blank">Learn Skill</a>
+</div>
+
+</section>
+
+<script src="learn-skill.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Work</title>
+    <link rel="stylesheet" href="find-work-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">WorkNest</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="find-work.html" class="active">Find Work</a></li>
+            <li><a href="do_work.html">Do Work</a></li>
+            <li><a href="learn-skills.html">Learn Skills</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+    <div class="find-header">
+        <h1>💼 Find Work Opportunities</h1>
+        <div class="filter-container">
+            <input type="text" id="searchInput" placeholder="Search work..." onkeyup="filterWork()">
+            <select id="categoryFilter" onchange="filterWork()">
+                <option value="all">All Types</option>
+                <option value="web">Web Development</option>
+                <option value="writing">Writing</option>
+                <option value="data">Data Entry</option>
+                <option value="design">Design</option>
+                <option value="tutoring">Tutoring</option>
+                <option value="video">Video Editing</option>
+                <option value="assistant">Virtual Assistant</option>
+            </select>
+        </div>
+    </div>
+    <div class="work-container">
+        <div class="work-card" data-type="web">
+            <h2>Freelance Web Development</h2>
+            <p>Work from home building simple websites for local businesses. Flexible timings!</p>
+            <div class="info">
+                <span>🏢 Remote</span>
+                <span>💰 $10-$15/hour</span>
+            </div>
+           <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="writing">
+            <h2>Content Writing Internship</h2>
+            <p>Write blog posts and social media content. Gain experience in digital marketing!</p>
+            <div class="info">
+                <span>🏢 Online</span>
+                <span>💰 Stipend $50/week</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="data">
+            <h2>Data Entry Work</h2>
+            <p>Enter and organize data for small businesses. No experience required, learn as you go!</p>
+            <div class="info">
+                <span>🏢 Remote</span>
+                <span>💰 $8-$12/hour</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="writing">
+            <h2>Social Media Assistant</h2>
+            <p>Help manage Instagram and Facebook accounts for small businesses. Fun and creative!</p>
+            <div class="info">
+                <span>🏢 Online</span>
+                <span>💰 $100/month</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="design">
+            <h2>Graphic Design Projects</h2>
+            <p>Create logos, banners, and posters for local events or online stores. Showcase your creativity!</p>
+            <div class="info">
+                <span>🏢 Remote</span>
+                <span>💰 $12-$20/project</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="tutoring">
+            <h2>Online Tutoring</h2>
+            <p>Teach basic coding, maths, or science to students online. Flexible schedule and learn teaching skills!</p>
+            <div class="info">
+                <span>🏢 Online</span>
+                <span>💰 $15/hour</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="video">
+            <h2>Video Editing Intern</h2>
+            <p>Edit short videos for YouTube, TikTok, or Instagram. Learn real-world video editing while earning.</p>
+            <div class="info">
+                <span>🏢 Remote</span>
+                <span>💰 $10-$18/hour</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+
+        <div class="work-card" data-type="assistant">
+            <h2>Virtual Assistant</h2>
+            <p>Help manage emails, schedule meetings, and organize tasks for small business owners online.</p>
+            <div class="info">
+                <span>🏢 Online</span>
+                <span>💰 $100-$150/month</span>
+            </div>
+            <button>Apply Now</button>
+        </div>
+    </div>
+    
+
+    <script>
+        function filterWork() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const cards = document.querySelectorAll('.work-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                const type = card.getAttribute('data-type');
+
+                if ((title.includes(searchInput) || searchInput === '') &&
+                    (categoryFilter === 'all' || type === categoryFilter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

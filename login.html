@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - WorkNest</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+   <nav class="navbar">
+        <div class="logo">WorkNest</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+            <li><a href="find-work.html">Find Work</a></li>
+            <li><a href="do_work.html">Do Work</a></li>
+            <li><a href="learn-skills.html">Learn Skills</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>
+    </nav>
+
+  <div class="wrapper">
+    <div class="card">
+      <div class="left">
+        <h1>Welcome to WorkNest!</h1>
+        <p class="subtitle">Login to your account</p>
+
+        <p class="small-text">Choose your preferred social account for instant access</p>
+
+        <button class="social-btn google">
+          <span class="icon">G</span>
+          Continue with Google
+        </button>
+
+        <button class="social-btn github">
+          <span class="icon">Git</span>
+          Continue with GitHub
+        </button>
+
+        <div class="divider"><span>Or</span></div>
+        <div id="login-section">
+            <div class="email-header">
+              <span>✉</span>
+              <span>Login via Email</span>
+            </div>
+
+            <form class="email-form" id="loginForm">
+              <label>Email address</label>
+              <input type="email" id="email" placeholder="email@example.com" required>
+
+              <label>Password</label>
+              <input type="password" id="password" placeholder="Enter your password" required>
+
+              <button type="submit" class="submit-btn">Continue</button>
+              <p id="login-message" style="color:red; margin-top:10px;"></p>
+            </form>
+        </div>
+        <div id="signup-form" style="display:none; margin-top:20px;">
+          <h3>Create New Account</h3>
+          <label>Email</label>
+          <input type="email" id="signup-email" placeholder="email@example.com" required>
+          <label>Password</label>
+          <input type="password" id="signup-password" placeholder="Enter password" required>
+          <button type="button" class="submit-btn" onclick="signupUser()">Sign Up</button>
+          <p id="signup-message" style="color:green; margin-top:10px;"></p>
+        </div>
+
+        <button type="button" class="submit-btn" style="margin-top:10px;" onclick="showSignup()">Create New Account</button>
+      </div>
+
+      <div class="right">
+        <img src="https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg" alt="Work Image">
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
